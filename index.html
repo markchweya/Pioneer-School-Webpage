@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pioneer School</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html">
+        <img src="images/pioneer-school-logo.png" alt="Pioneer Group of Schools logo" />
+      </a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <!-- <li><a href="">HOME</a></li> -->
+          <!-- <li><a href="">CURRICULUM</a></li> -->
+          <li><a href="">OTHER SCHOOLS</a></li>
+          <li><a href="">FACILITIES</a></li>
+          <li><a href="fees.html">FEES STRUCTURE</a></li>
+          <li><a onclick="openGmail() ">CONTACT</a></li>
+          <!-- <li><a href="">GALLERY</a></li> -->
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+      <h1>PIONEER SCHOOL</h1>
+      <p>
+        Located in Maragua Sub County in the county of Murang’a, central
+        Kenya, is the well-known Pioneer School Maragua. The school is quite
+        popular despite its setting in the vicinity of the rural area of
+        Maragua. The school is undoubtedly one of the best things to come from
+        the sub-county. Pioneer School is a privately-owned boys’ boarding
+        school that comes with great amenities and the promise of academic
+        success.
+      </p>
+      <a href="" class="hero-btn">APPLY NOW</a>
+    </div>
+  </section>
+
+  <!--------Curriculum-------------->
+  <section class="course">
+    <h1>Our Curriculum</h1>
+    <p>
+      Students follow the Kenya National Curriculum and are expected to sit in
+      the KCSE exams. We place a deep curricular focus on STEAM (Sciences,
+      Technology, Engineering, Arts, and Mathematics) and integrating
+      technology into students' daily lives.
+    </p>
+
+    <div class="row">
+      <div class="course-col">
+        <h3>FORM ONE</h3>
+        <p>
+          The vision of the basic education curriculum reforms is to enable
+          every Kenyan to become an engaged, empowered and ethical citizen.
+        </p>
+      </div>
+      <div class="course-col">
+        <h3>FORM TWO</h3>
+        <p>
+          The vision of the basic education curriculum reforms is to enable
+          every Kenyan to become an engaged, empowered and ethical citizen.
+        </p>
+      </div>
+      <div class="course-col">
+        <h3>FORM THREE</h3>
+        <p>
+          The vision of the basic education curriculum reforms is to enable
+          every Kenyan to become an engaged, empowered and ethical citizen.
+        </p>
+      </div>
+
+      <div class="course-col">
+        <h3>FORM FOUR</h3>
+        <p>
+          The vision of the basic education curriculum reforms is to enable
+          every Kenyan to become an engaged, empowered and ethical citizen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!---------OTHER SCHOOLS -------------->
+
+  <!-- 
+  <section class="campus">
+    <h1>OUR OTHER SCHOOLS</h1>
+    <p>Pioneer Group Of Schools is the head of other schools like the Pioneer Girls School located in Thika and St.Paul
+      Thomas Academy located in Maragua.</p>
+
+    <div class="row">
+      <div class="campus-col">
+        <img src="./images/st-paul-thomas-logo.png" alt="Logo of St.Thomas Academy">
+        <div class="layer">
+          <h3>ST. PAUL THOMAS ACADEMY</h3>
+        </div>
+      </div>
+      <div class="campus-col">
+        <img src="./images/pioneer-girls-school-logo.png" alt="Logo of St.Thomas Academy">
+        <div class="layer">
+          <h3>PIONEER GIRLS SCHOOL</h3>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Animation</title>
+  <style>
+    /* Add initial styles for the images */
+    .campus-col img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    /* Add a class to trigger the animation when in the viewport */
+    .animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body> -->
+  <section class="campus">
+    <h1>OUR OTHER SCHOOLS</h1>
+    <p>Pioneer Group Of Schools is the head of other schools like the Pioneer Girls School located in Thika and St.Paul
+      Thomas Academy located in Maragua.</p>
+
+    <div class="row">
+      <div class="campus-col">
+        <img src="./images/st-paul-thomas-logo.png" alt="Logo of St.Thomas Academy">
+        <div class="layer">
+          <h3>ST. PAUL THOMAS ACADEMY</h3>
+        </div>
+      </div>
+      <div class="campus-col">
+        <img src="./images/pioneer-girls-school-logo.png" alt="Logo of St.Thomas Academy">
+        <div class="layer">
+          <h3>PIONEER GIRLS SCHOOL</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Function to handle the animation when an element enters the viewport
+    function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+    // Select the elements to be observed
+    const elements = document.querySelectorAll('.campus-col img');
+
+    // Observe each selected element
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+
+</html>
+
+
+
+<!------------------------- FACILITIES ---------------------------->
+
+<section class="img-gallery">
+  <h1>PIONEER SCHOOL IMAGE GALLERY</h1>
+  <div id="slideshow-container" class="container">
+    <div class="mySlides fade">
+      <img src="images/five.jpg" alt="Image 1">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/four.jpg" alt="Image 2">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/one.jpg" alt="Image 3">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/three.jpg" alt="Image 4">
+    </div>
+  </div>
+</section>
+
+<!------------JavaScript for Toggle Menu---------------->
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu() {
+    navLinks.style.right = "0";
+  }
+  function hideMenu() {
+    navLinks.style.right = "-200px";
+  }
+</script>
+
+<!-- JavaScript code for image gallery -->
+<!-- <script>
+var slideIndex = 0;
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change slide every 3 seconds
+}
+
+// Run the slideshow when the page loads
+window.onload = function () {
+    showSlides();
+};
+
+
+  </script> -->
+
+
+<!-- <script>
+  function openGmail() {
+    var subject = encodeURIComponent("");
+    var body = encodeURIComponent("");
+
+    // Construct the mailto link
+    var mailtoLink = "mailto:chweyamark@gmail.com?subject=" + subject + "&body=" + body;
+
+    // Open the user's default email client
+    window.location.href = mailtoLink;
+  }
+</script> -->
+
+<script src="index.js"></script>
+</body>
+
+</html>

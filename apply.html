@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Application Form</title>
+  <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+
+
+        <div class="container">
+          <form id="applicationForm">
+            <fieldset>
+              <legend>Student Details</legend>
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" required>
+        
+              <label for="middleName">Middle Name</label>
+              <input type="text" id="middleName">
+        
+              <label for="surname">Surname</label>
+              <input type="text" id="surname" required>
+        
+              <label for="school">School</label>
+              <select id="school" required>
+                <option value="pioneer">Pioneer School</option>
+                <option value="pioneerGirls">Pioneer Girls School</option>
+                <option value="pioneerJunior">Pioneer Junior Secondary School</option>
+              </select>
+        
+              <!-- Additional questions based on school selection -->
+              <div id="additionalQuestions"></div>
+        
+              <label for="year">Year of Joining</label>
+              <input type="number" id="year" required>
+        
+              <label for="term">Term of Joining</label>
+              <select id="term" required>
+                <option value="term1">Term 1</option>
+                <option value="term2">Term 2</option>
+                <option value="term3">Term 3</option>
+              </select>
+        
+              <label for="gender">Gender</label>
+              <select id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+        
+              <label for="currentSchool">Current School</label>
+              <input type="text" id="currentSchool" required>
+            </fieldset>
+        
+            <!-- Parent Details Section -->
+            <fieldset>
+              <legend>Parent Details</legend>
+              <label for="parentFirstName">Parent's First Name</label>
+              <input type="text" id="parentFirstName" required>
+        
+              <label for="parentSurname">Parent's Surname</label>
+              <input type="text" id="parentSurname" required>
+        
+              <label for="parentEmail">Email</label>
+              <input type="email" id="parentEmail" required>
+        
+              <label for="parentPhone">Phone Number</label>
+              <input type="tel" id="parentPhone" required>
+        
+              <label for="alternativeEmail">Alternative Email (Optional)</label>
+              <input type="email" id="alternativeEmail">
+        
+              <label for="physicalAddress">Physical Address</label>
+              <input type="text" id="physicalAddress" required>
+        
+              <label for="parentRole">Parent's Role</label>
+              <select id="parentRole" required>
+                <option value="mother">Mother</option>
+                <option value="father">Father</option>
+              </select>
+            </fieldset>
+        
+            <!-- Optional Second Parent Details Section -->
+            <fieldset id="secondParentFieldset" style="display: none;">
+              <legend>Second Parent Details</legend>
+              <!-- Add similar fields as the first parent's details -->
+            </fieldset>
+        
+            <button type="button" id="prevButton" onclick="showPage('studentDetails')">Previous</button>
+            <button type="button" id="nextButton" onclick="showPage('parentDetails')">Next</button>
+            <button type="submit" id="submitButton">Submit</button>
+          </form>
+        </div>
+
+<script src="apply.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body{
+    background: rgb(37, 7, 73);
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 10px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(37, 7, 73);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.apply-btn{
+    color:  rgb(37, 7, 73);
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    width: 200px;
+}
+
+.apply-btn:hover{
+    color: white;
+    background-color: rgb(37, 7, 73);
+}
+
+
+
+.fees-image {
+    padding-top: 10px;
+    height: 350px;
+    width: 1250px;
+    display: block;
+    border-radius: 10px;
+}
+
+.fees-info {
+    background: rgb(37, 7, 73);
+    color: white;
+    width: 1000px;
+    padding: 20px;
+    position: absolute;
+    top: 60%;
+    height: 500px;
+  
+}
+
+.fee-heading, h2{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+.fee-download{
+    margin-top: 100px;
+}
+
+
+.fee-links, button{
+    padding: 20px;
+    color: white;
+    margin-left: 150px;
+    width: 450px;
+    transition: 0.3s;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 20px;
+    border: 2px solid rgb(37, 7, 73); 
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.fee-links button:hover {
+
+    background-color: rgb(37, 7, 73);
+    
+}
+
+.fee-links, a{
+    text-decoration: none;
+}
+
+
+
+
